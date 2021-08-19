@@ -6,4 +6,5 @@ RUN npm i pm2 -g
 RUN npm i
 RUN npm run build
 
+EXPOSE 3000
 CMD ["npm", "run", "pm2"] 
