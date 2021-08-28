@@ -1,0 +1,2 @@
+docker build -t genal-chat-server:latest -f genal-chat-server/deployment/Dockerfile .
+docker run --rm -it -p 3000:3000 --name genal-chat-server genal-chat-server:latest

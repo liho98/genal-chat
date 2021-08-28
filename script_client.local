@@ -1,0 +1,2 @@
+docker build -t genal-chat-client:latest -f genal-chat-client/deployment/Dockerfile .
+docker run --rm -it -v /Users/liho/Desktop/genal-chat/certs.local:/etc/ssl/certs -p 80:80 -p 443:443 --name genal-chat-client genal-chat-client:latest
