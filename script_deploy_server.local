@@ -2,7 +2,8 @@ docker login -u liho98 -p 45d8e2d2-7b73-423a-a423-7b4c77f838fc
 docker build --pull -t liho98/genal-chat:genal-chat-server -f genal-chat-server/deployment/Dockerfile .
 docker push liho98/genal-chat:genal-chat-server
 
-ssh -t root@47.242.90.106 docker login -u liho98 -p 45d8e2d2-7b73-423a-a423-7b4c77f838fc
-ssh -t root@47.242.90.106 docker pull liho98/genal-chat:genal-chat-server
-ssh -t root@47.242.90.106 docker rm -f genal-chat-server || true
-ssh -t root@47.242.90.106 docker run --restart=always -itd --net=host --name genal-chat-server liho98/genal-chat:genal-chat-server
+ssh -t root@47.242.90.106 "docker login -u liho98 -p 45d8e2d2-7b73-423a-a423-7b4c77f838fc
+docker pull liho98/genal-chat:genal-chat-server
+docker rm -f genal-chat-server || true
+docker run --restart=always -itd --net=host --name genal-chat-server liho98/genal-chat:genal-chat-server
+"
