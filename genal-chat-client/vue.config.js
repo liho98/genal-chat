@@ -1,4 +1,4 @@
-const Host = 'http://localhost:3000';
+const Host = 'http://349assistant.cn';
 const webpack = require('webpack');
 
 // cdn链接
@@ -92,9 +92,9 @@ module.exports = {
         target: Host,
         ws: true,
         changeOrigin: true,
-        pathRewrite: {
-          '^/api': '',
-        },
+        // pathRewrite: {
+        //   '^/api': '',
+        // },
       },
       'socket.io': {
         target: Host,
