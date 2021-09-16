@@ -13,7 +13,7 @@ import { AuthModule } from './modules/auth/auth.module';
       port: 3306,
       username: 'root',
       password: 'Passw0rd!',
-      database: 'chat',
+      database: 'chat3',
       charset: "utf8mb4", // 设置chatset编码为utf8mb4
       autoLoadEntities: true,
       synchronize: true
