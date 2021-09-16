@@ -34,7 +34,7 @@ export class ChatGateway {
     @InjectRepository(FriendMessage)
     private readonly friendMessageRepository: Repository<FriendMessage>,
   ) {
-    this.defaultGroup = '创U聊天室';
+    this.defaultGroup = '阿童木聊天室';
   }
 
   @WebSocketServer()
