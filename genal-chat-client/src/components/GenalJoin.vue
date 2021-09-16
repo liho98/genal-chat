@@ -3,7 +3,7 @@
     <a-modal header="" footer="" :visible="showModal" :closable="false">
       <a-tabs @change="changeType">
         <a-tab-pane key="login" tab="登录"> </a-tab-pane>
-        <a-tab-pane key="register" tab="注册" force-render> </a-tab-pane>
+        <!-- <a-tab-pane key="register" tab="注册" force-render> </a-tab-pane> -->
       </a-tabs>
       <a-form id="components-form-demo-normal-login" :form="form" class="login-form" @submit="handleSubmit">
         <a-form-item>

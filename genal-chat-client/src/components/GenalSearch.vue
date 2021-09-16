@@ -16,7 +16,7 @@
         </a-select-option>
       </a-select>
 
-      <a-dropdown class="search-dropdown">
+      <!-- <a-dropdown class="search-dropdown">
         <a-icon type="plus-circle" class="search-dropdown-button" />
         <a-menu slot="overlay">
           <a-menu-item>
@@ -29,7 +29,7 @@
             <div @click="() => (visibleAddFriend = !visibleAddFriend)">搜索用户</div>
           </a-menu-item>
         </a-menu>
-      </a-dropdown>
+      </a-dropdown> -->
     </div>
 
     <a-modal v-model="visibleAddGroup" footer="" title="创建群">
