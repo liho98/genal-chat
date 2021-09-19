@@ -33,7 +33,7 @@
           </a-upload>
           <a-icon class="loading" v-if="uploading" type="loading" spin />
         </div>
-        <!-- <div class="tool-user-info">
+        <div class="tool-user-info">
           <div class="tool-user-title">更改用户名</div>
           <a-input class="tool-user-input" v-model="username" placeholder="请输入用户名"></a-input>
           <a-button type="primary" @click="changeUserName">确认</a-button>
@@ -42,7 +42,7 @@
           <div class="tool-user-title">更改密码</div>
           <a-input-password class="tool-user-input" v-model="password" placeholder="请输入密码"></a-input-password>
           <a-button type="primary" @click="changePassword">确认</a-button>
-        </div> -->
+        </div>
       </div>
     </a-modal>
     <a-modal title="主题" :visible="showBackgroundModal" footer="" @cancel="showBackgroundModal = false">
