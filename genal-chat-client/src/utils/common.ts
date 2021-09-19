@@ -77,10 +77,10 @@ export function nameVerify(name: string): boolean {
     Vue.prototype.$message.error('名字只含有汉字、字母、数字和下划线 不能以下划线开头和结尾');
     return false;
   }
-  if (name.length > 9) {
-    Vue.prototype.$message.error('名字太长');
-    return false;
-  }
+  // if (name.length > 9) {
+  //   Vue.prototype.$message.error('名字太长');
+  //   return false;
+  // }
   return true;
 }
 
