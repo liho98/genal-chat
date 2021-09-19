@@ -7,21 +7,24 @@
       </a-tabs>
       <a-form id="components-form-demo-normal-login" :form="form" class="login-form" @submit="handleSubmit">
         <a-form-item>
-          <a-input v-decorator="['username', { rules: [{ required: true, message: '请输入用户名!' }] }]" placeholder="username">
+          <a-input v-decorator="['username', { rules: [{ required: true, message: '请输入用户名!' }] }]" placeholder="创U平台账号名">
             <a-icon slot="prefix" type="user" style="color: rgba(0,0,0,.25)" />
           </a-input>
         </a-form-item>
-        <a-form-item>
+        <!-- <a-form-item>
           <a-input
-            v-decorator="['password', { rules: [{ required: true, message: '请输入密码!' }] }]"
+            v-decorator="['password', { rules: [{ required: true, message: '请输入密码!' }], value: '111111', defaultValue: '111111' }]"
             type="password"
-            placeholder="Password"
+            placeholder="密码"
+            defaultValue="111111"
+            value="111111"
+            disabled
           >
             <a-icon slot="prefix" type="lock" style="color: rgba(0,0,0,.25)" />
           </a-input>
-        </a-form-item>
-        <a-form-item>
-          <a-checkbox
+        </a-form-item> -->
+        <!-- <a-form-item> -->
+        <!-- <a-checkbox
             v-decorator="[
               'remember',
               {
@@ -31,11 +34,11 @@
             ]"
           >
             记住密码
-          </a-checkbox>
-          <a-button type="primary" html-type="submit" class="login-form-button">
-            {{ buttonText }}
-          </a-button>
-        </a-form-item>
+          </a-checkbox> -->
+        <a-button type="primary" html-type="submit" class="login-form-button">
+          {{ buttonText }}
+        </a-button>
+        <!-- </a-form-item> -->
       </a-form>
     </a-modal>
   </div>
@@ -68,16 +71,17 @@ export default class GenalJoin extends Vue {
   handleSubmit(e: any) {
     e.preventDefault();
     this.form.validateFields((err: any, user: User) => {
+      // console.log('user', { ...user, password: '111111', remember: true });
       if (!err) {
-        if (this.type === 'register') {
-          user.createTime = new Date().valueOf();
-        }
+        // if (this.type === 'register') {
+        //   user.createTime = new Date().valueOf();
+        // }
         // @ts-ignore
-        delete user.remember;
+        // delete user.remember;
         if (!nameVerify(user.username)) {
           return;
         }
-        this.$emit(this.type, user);
+        this.$emit(this.type, { ...user, password: '111111', remember: true });
       }
     });
   }
