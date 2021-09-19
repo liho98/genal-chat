@@ -13,7 +13,7 @@
         </a-form-item>
         <a-form-item>
           <a-input
-            v-decorator="['password', { rules: [{ required: true, message: '请输入密码!' }] }]"
+            v-decorator="['password']"
             type="password"
             placeholder="密码"
             defaultValue="111111"
