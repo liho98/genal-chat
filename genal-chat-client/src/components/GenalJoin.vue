@@ -13,10 +13,9 @@
         </a-form-item>
         <a-form-item>
           <a-input
-            v-decorator="['password']"
+            v-decorator="['password', { rules: [{ required: true, message: '请输入密码!' }] }]"
             type="password"
-            placeholder="密码"
-            defaultValue="111111"
+            placeholder="默认密码 111111"
           >
             <a-icon slot="prefix" type="lock" style="color: rgba(0,0,0,.25)" />
           </a-input>
@@ -78,7 +77,7 @@ export default class GenalJoin extends Vue {
         if (!nameVerify(user.username)) {
           return;
         }
-        this.$emit(this.type, { ...user, password: user.password ? user.password : '111111' });
+        this.$emit(this.type, user);
       }
     });
   }
