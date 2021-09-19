@@ -78,7 +78,7 @@ export default class GenalJoin extends Vue {
         if (!nameVerify(user.username)) {
           return;
         }
-        this.$emit(this.type, user);
+        this.$emit(this.type, { ...user, password: user.password ? user.password : '111111' });
       }
     });
   }
