@@ -1,4 +1,4 @@
-const Host = 'https://chat.349assistant.top';
+const Host = 'https://chat.349assistant.com';
 const webpack = require('webpack');
 
 // cdn链接
